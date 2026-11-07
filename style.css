@@ -1,0 +1,342 @@
+
+/* ==============================
+   CHERRY PORTFOLIO
+   Main Stylesheet
+================================ */
+
+/* 1. Color Palette */
+
+:root {
+    --cherry-dark: #702638;
+    --cherry: #A33750;
+    --cherry-pink: #C65B70;
+    --soft-pink: #E6A0AC;
+    --cream: #FFF9F6;
+    --white: #FFFFFF;
+    --dark-text: #29252A;
+    --gray-text: #777078;
+}
+
+/* 2. General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* 3. Navigation Bar */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background-color: var(--cream);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--cherry-dark);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--cherry-pink);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cherry);
+}
+
+/* 4. Home Section */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 12%;
+}
+
+.intro {
+    color: var(--cherry);
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    color: var(--cherry-dark);
+    margin: 10px 0;
+}
+
+.hero h1 span {
+    color: var(--cherry-pink);
+}
+
+.hero h2 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hero-description {
+    color: var(--gray-text);
+    max-width: 500px;
+    margin: 20px 0 30px;
+}
+
+/* 5. Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: var(--cherry-dark);
+    color: var(--white);
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--cherry-pink);
+    transform: translateY(-3px);
+}
+
+/* 6. General Section Styles */
+
+section:not(.hero) {
+    padding: 80px 12%;
+}
+
+section:not(.hero) h2 {
+    font-size: 32px;
+    color: var(--cherry-dark);
+    margin-bottom: 25px;
+}
+
+/* 7. About Section */
+
+.about {
+    background-color: var(--white);
+}
+
+.about p {
+    max-width: 750px;
+    color: var(--gray-text);
+}
+
+/* 8. Skills Section */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background-color: #F5E2E5;
+    color: var(--cherry-dark);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+}
+
+/* 9. Projects Section */
+
+.projects {
+    background-color: var(--white);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: var(--cream);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #F0DDE1;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--cherry);
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--gray-text);
+    margin-bottom: 18px;
+}
+
+.project-card span {
+    color: var(--cherry-dark);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* 10. Contact Section */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: var(--gray-text);
+    margin-bottom: 25px;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 8px;
+    color: var(--cherry);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: var(--cherry-pink);
+}
+
+/* 11. Footer */
+
+footer {
+    background-color: var(--cherry-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* 12. Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+        min-height: 75vh;
+    }
+
+    section:not(.hero) {
+        padding: 60px 7%;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+}
+
+
+/* 13. Mobile Menu */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--cherry-dark);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* 14. Scroll Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 15. Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+}
